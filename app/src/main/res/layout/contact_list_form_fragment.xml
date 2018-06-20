@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contact_list_form_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    >
+
+
+
+
+<EditText
+    android:id="@+id/editTextLastName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="@string/ca_contact_hint_lastname"
+    android:inputType="textPersonName"
+    android:text=""
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextFirstName" />
+
+<EditText
+    android:id="@+id/editTextFirstName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="@string/ca_contact_hint_firstname"
+    android:inputType="textPersonName"
+    android:text=""
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/contactLabel" />
+
+<TextView
+    android:id="@+id/contactLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/ca_contact_label"
+    android:textSize="8pt"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/addressLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/ca_address_label"
+    android:textSize="8pt"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextLastName" />
+
+<EditText
+    android:id="@+id/editTextAddr"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="@string/ca_addr_hint"
+    android:inputType="textPostalAddress"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/addressLabel" />
+
+<EditText
+    android:id="@+id/editTextAddr2"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="@string/ca_addr_hint2"
+    android:inputType="textPostalAddress"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextAddr" />
+
+<EditText
+    android:id="@+id/editTextCity"
+    android:layout_width="186dp"
+    android:layout_height="46dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="@string/ca_contact_hint_city"
+    android:inputType="textPersonName"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextAddr2" />
+
+<EditText
+    android:id="@+id/editTextState"
+    android:layout_width="50dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="@string/ca_contact_hint_state"
+    android:inputType="textPersonName"
+    app:layout_constraintStart_toEndOf="@+id/editTextCity"
+    app:layout_constraintTop_toBottomOf="@+id/editTextAddr2" />
+
+<EditText
+    android:id="@+id/editTextZip"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="@string/ca_contact_hint_zip"
+    android:inputType="number"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toEndOf="@+id/editTextState"
+    app:layout_constraintTop_toBottomOf="@+id/editTextAddr2" />
+
+<TextView
+    android:id="@+id/textViewHomePhoneLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/ca_contact_home_phone_label"
+    android:textSize="8pt"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextCity" />
+
+<TextView
+    android:id="@+id/textViewCellPhoneLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/ca_contact_cell_phone_label"
+    android:textSize="8pt"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextHomePhone" />
+
+<EditText
+    android:id="@+id/editTextHomePhone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="@string/ca_contact_cell_phone_input"
+    android:inputType="phone"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textViewHomePhoneLabel" />
+
+<EditText
+    android:id="@+id/editTextCellPhone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="@string/ca_contact_cell_phone_input"
+    android:inputType="phone"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textViewCellPhoneLabel" />
+
+<TextView
+    android:id="@+id/textViewEmailLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:text="@string/ca_contact_email_label"
+    android:textSize="8pt"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextCellPhone" />
+
+<EditText
+    android:id="@+id/editTextEmail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="@string/ca_contact_email_hint"
+    android:inputType="textEmailAddress"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textViewEmailLabel" />
+
+<TextView
+    android:id="@+id/textViewBirthdayLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:text="@string/ca_contact_birthday_label"
+    android:textSize="8pt"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+<EditText
+    android:id="@+id/editTextBirthday"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:inputType="date"
+    android:hint="@string/ca_contact_birthday_hint"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textViewBirthdayLabel" />
+
+</android.support.constraint.ConstraintLayout>
