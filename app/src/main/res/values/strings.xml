@@ -30,4 +30,7 @@
 <string name="lorem_ipsum">Test</string>
     <string name="test_name">Christian</string>
     <string name="test_name2">Sam</string>
+    <string name="auth_text">Please log in or sign up</string>
+    <string name="login_text">Log in</string>
+    <string name="signup_text">Sign up</string>
 </resources>

@@ -22,8 +22,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
+
+    <com.lorentzos.flingswipe.SwipeFlingAdapterView
+        android:id="@+id/frame"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -35,8 +36,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNAVHeader">
-
-    </android.support.v4.view.ViewPager>
+        app:layout_constraintTop_toBottomOf="@+id/textNAVHeader"
+        app:rotation_degrees="15.5"
+        tools:context=".MainActivity" />
 
 </android.support.constraint.ConstraintLayout>

@@ -17,4 +17,37 @@
     <color name="colorGreenGrass">#94AE4A</color>
     <color name="colorPurple">#6E005F</color>
     <color name="colorOrangeDark">#CB5A28</color>
+    <color name="colorBgLight">#f8f9fa</color>
+    <color name="colorBgDark">#343a40</color>
+    <color name="colorBgWhite">#fff</color>
+    <color name="colorBgInfo">#17a2b8</color>
+    <color name="colorBgWarning">#ffc107</color>
+    <color name="colorBgDanger">#dc3545</color>
+    <color name="colorBgSuccess">#28a745</color>
+    <color name="colorBgSecondary">#6c757d</color>
+    <color name="colorBgPrimary">#007bff</color>
+
+
+    <color name="colorTextWhite">#fff</color>
+    <color name="colorTextInfo">#17a2b8</color>
+    <color name="colorTextWarning">#ffc107</color>
+    <color name="colorTextDanger">#dc3545</color>
+    <color name="colorTextSuccess">#28a745</color>
+    <color name="colorTextLight">#f8f9fa</color>
+    <color name="colorTextDark">#343a40</color>
+    <color name="colorTextSecondary">#6c757d</color>
+    <color name="colorTextPrimary">#007bff</color>
+    <color name="colorTextMuted">#6c757d</color>
+
+    <color name="colorTextLinkWhite">#fff</color>
+    <color name="colorTextLinkInfo">#17a2b8</color>
+    <color name="colorTextLinkWarning">#ffc107</color>
+    <color name="colorTextLinkDanger">#dc3545</color>
+    <color name="colorTextLinkSuccess">#28a745</color>
+    <color name="colorTextLinkLight">#f8f9fa</color>
+    <color name="colorTextLinkDark">#343a40</color>
+    <color name="colorTextLinkSecondary">#6c757d</color>
+    <color name="colorTextLinkPrimary">#007bff</color>
+    <color name="colorTextLinkMuted">#6c757d</color>
+
 </resources>
