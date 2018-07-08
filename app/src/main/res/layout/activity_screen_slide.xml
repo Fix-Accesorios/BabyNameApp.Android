@@ -18,6 +18,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:textSize="14pt"
+        android:textColor="@color/colorTextWhite"
         android:text="@string/nav_main_header"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,5 +40,51 @@
         app:layout_constraintTop_toBottomOf="@+id/textNAVHeader"
         app:rotation_degrees="15.5"
         tools:context=".MainActivity" />
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle_blue"
+        android:contentDescription="Male Icon"
+        android:cropToPadding="true"
+        android:src="@mipmap/male_icon"
+        android:text=""
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle_pink"
+        android:contentDescription="Female Icon"
+        android:src="@mipmap/female_icon"
+        android:text=""
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/button3"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle_purple"
+        android:contentDescription="both Icon"
+        android:src="@mipmap/both_icon"
+        android:text=""
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

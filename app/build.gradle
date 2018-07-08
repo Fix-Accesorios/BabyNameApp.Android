@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.christian.mycontactlist"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 27
         vectorDrawables.useSupportLibrary = true
         versionCode 1
@@ -30,6 +30,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.volley:volley:1.1.0'
-    implementation group : 'org.json', name: 'json', version: '20180130'
+    implementation group: 'org.json', name: 'json', version: '20180130'
     implementation 'com.lorentzos.swipecards:library:1.0.9@aar'
 }

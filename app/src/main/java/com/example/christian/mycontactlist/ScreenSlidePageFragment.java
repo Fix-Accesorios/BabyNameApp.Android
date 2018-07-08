@@ -11,6 +11,8 @@ import android.widget.TextView;
 public class ScreenSlidePageFragment extends Fragment {
     private TextView slider_name_text;
     private String NAME;
+    private String GENDER;
+    private int ID;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_screen_slide_page, container, false);
@@ -27,5 +29,17 @@ public class ScreenSlidePageFragment extends Fragment {
     }
     public void setName(String name){
         this.NAME = name;
+    }
+    public String getGENDER() {
+        return GENDER;
+    }
+    public void setGENDER(String gender){
+        this.GENDER = gender;
+    }
+    public int getID() {
+        return ID;
+    }
+    public void setID(int id){
+        this.ID = id;
     }
 }

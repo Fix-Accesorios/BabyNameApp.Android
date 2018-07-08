@@ -29,15 +29,6 @@ public class MainActivity extends AppCompatActivity {
     }
     protected boolean checkForLogin() {
         String filename = "api_token.txt";
-//        String fileContents = "Hello world!";
-//        FileOutputStream outputStream;
-//        try {
-//            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
-//            outputStream.write(fileContents.getBytes());
-//            outputStream.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
         File directory = getFilesDir();
         File file = null;
         try{
@@ -115,11 +106,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                if (id == R.id.action_list) {
-                    ContactListItemFragment first = new ContactListItemFragment();
-                    FragmentManager fm = getSupportFragmentManager();
-                    fm.beginTransaction().replace(R.id.fragment_container, first).addToBackStack(null).commit();
-                } else if (id == R.id.action_search) {
+                if (id == R.id.action_list || id == R.id.action_search) {
                     ScreenSlidePagerActivity second = new ScreenSlidePagerActivity();
                     FragmentManager fm = getSupportFragmentManager();
                     fm.beginTransaction().replace(R.id.fragment_container, second).addToBackStack(null).commit();

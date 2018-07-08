@@ -1,36 +1,50 @@
 <resources>
     <string name="app_name">Baby Name</string>
-    <string name="navigation_icon_desc">Explore</string>
-    <string name="list_icon_desc">List</string>
+    <string name="navigation_icon_desc">Search</string>
+    <string name="list_icon_desc">Refine</string>
     <string name="settings_icon_desc">Settings</string>
-    <string name="cl_main_header">Contacts</string>
     <string name="add_contact_main_header">Add Contact</string>
-    <string name="nav_main_header">Select Name</string>
+    <string name="nav_main_header">Search</string>
     <string name="settings_main_header">Settings</string>
 
-    <string name="cl_add_button">Add</string>
     <string name="back">Back</string>
     <string name="save">Save</string>
-    <string name="ca_addr_hint">Address Line 1</string>
-    <string name="ca_addr_hint2">Address Line 2</string>
-    <string name="ca_contact_label">Contact</string>
-    <string name="ca_address_label">Address</string>
-    <string name="ca_contact_hint_firstname">First Name</string>
-    <string name="ca_contact_hint_lastname">Last Name</string>
-    <string name="ca_contact_hint_city">City</string>
-    <string name="ca_contact_hint_state">St.</string>
-    <string name="ca_contact_hint_zip">Zip</string>
-    <string name="ca_contact_home_phone_label">Home Phone</string>
-    <string name="ca_contact_cell_phone_label">Cell Phone</string>
-    <string name="ca_contact_cell_phone_input">XXX-XXX-XXXX</string>
-    <string name="ca_contact_email_label">Email</string>
-    <string name="ca_contact_email_hint">example@domain.com</string>
-    <string name="ca_contact_birthday_label">Birthday</string>
-    <string name="ca_contact_birthday_hint">mm/dd/yyyy</string>
-<string name="lorem_ipsum">Test</string>
-    <string name="test_name">Christian</string>
-    <string name="test_name2">Sam</string>
+
+
+    <!--Auth Activity-->
     <string name="auth_text">Please log in or sign up</string>
-    <string name="login_text">Log in</string>
-    <string name="signup_text">Sign up</string>
+    <string name="login_text">Log In</string>
+    <string name="signup_text">Sign Up</string>
+    <string name="submit_text">Submit</string>
+    <string name="forgot_pw">forgot password?</string>
+
+    <!--Sign Up Fragment-->
+    <string name="su_first_name_label">First Name</string>
+    <string name="su_last_name_label">Last Name</string>
+    <string name="su_first_name_hint">Jon</string>
+    <string name="su_last_name_hint">Doe</string>
+    <string name="su_email_label">Email</string>
+    <string name="su_password_label">Password</string>
+    <string name="su_confirm_password_label">Confirm Password</string>
+    <string name="su_email_hint">example@domain.com</string>
+    <string name="su_confirm_email_hint">Confirm email</string>
+
+
+    <!--About Activity-->
+    <string name="about_header">About</string>
+    <string name="about_author_label">Author</string>
+    <string name="about_author_name">Christian Matsoukis</string>
+    <string name="about_author_email_label">Support Email</string>
+    <string name="about_author_email">cmatsoukis@gmail.com</string>
+    <string name="about_author_font_label">Fonts</string>
+    <string name="about_author_font_geo_sans_light">Geo Sans Light</string>
+    <string name="about_author_font_geo_sans_light_oblique">Geo Sans Light Oblique</string>
+    <string name="about_author_font_author">Manfred Klein</string>
+    <string name="about_icons_label">Icons</string>
+    <string name="about_icons_site">https://www.iconsdb.com</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
