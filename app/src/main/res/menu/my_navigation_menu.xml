@@ -3,15 +3,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_search"
-        android:icon="@mipmap/navigation"
-        android:title="@string/navigation_icon_desc"
+        android:id="@+id/action_explore"
+        android:icon="@mipmap/explore"
+        android:title="@string/explore_icon_desc"
         app:showAsAction="ifRoom"
         />
     <item
-        android:id="@+id/action_list"
-        android:icon="@mipmap/list"
-        android:title="@string/list_icon_desc"
+        android:id="@+id/action_refine"
+        android:icon="@mipmap/refine"
+        android:title="@string/refine_icon_desc"
         app:showAsAction="ifRoom"
         />
 

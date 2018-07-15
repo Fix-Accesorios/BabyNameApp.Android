@@ -8,14 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class ScreenSlidePageFragment extends Fragment {
+public class ExploreSreenFragment extends Fragment {
     private TextView slider_name_text;
     private String NAME;
     private String GENDER;
     private int ID;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_screen_slide_page, container, false);
+        View view = inflater.inflate(R.layout.explore_screen_fragment, container, false);
         return view;
     }
     @Override

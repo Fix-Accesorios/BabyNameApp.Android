@@ -46,6 +46,7 @@ public class LoginFormFragment extends Fragment {
     }
     private StringRequest LogIn(){
         String url = "https://murmuring-lake-56352.herokuapp.com/login";
+        //String url = "http://172.18.47.49:8080/login";
         Uri.Builder uri_b = new Uri.Builder();
         uri_b.appendQueryParameter("email", GetEmail());
         uri_b.appendQueryParameter("password", GetPassword());

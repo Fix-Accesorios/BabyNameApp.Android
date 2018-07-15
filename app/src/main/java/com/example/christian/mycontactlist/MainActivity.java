@@ -9,15 +9,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -94,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             if (savedInstanceState != null) {
                 return;
             }
-            ScreenSlidePagerActivity second = new ScreenSlidePagerActivity();
+            ExploreFragment second = new ExploreFragment();
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.fragment_container, second).addToBackStack(null).commit();
         }
@@ -106,14 +103,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                if (id == R.id.action_list || id == R.id.action_search) {
-                    ScreenSlidePagerActivity second = new ScreenSlidePagerActivity();
+                if (id == R.id.action_explore) {
+                    ExploreFragment exploreFragment = new ExploreFragment();
                     FragmentManager fm = getSupportFragmentManager();
-                    fm.beginTransaction().replace(R.id.fragment_container, second).addToBackStack(null).commit();
-                } else if (id == R.id.action_settings) {
-                    SettingsFragment third = new SettingsFragment();
+                    fm.beginTransaction().replace(R.id.fragment_container, exploreFragment).addToBackStack(null).commit();
+                }
+                else if(id == R.id.action_refine) {
+                    RefineFragment refineFragment = new RefineFragment();
                     FragmentManager fm = getSupportFragmentManager();
-                    fm.beginTransaction().replace(R.id.fragment_container, third).addToBackStack(null).commit();
+                    fm.beginTransaction().replace(R.id.fragment_container, refineFragment).addToBackStack(null).commit();
+                }
+                else if (id == R.id.action_settings) {
+                    SettingsFragment settingsFragment = new SettingsFragment();
+                    FragmentManager fm = getSupportFragmentManager();
+                    fm.beginTransaction().replace(R.id.fragment_container, settingsFragment).addToBackStack(null).commit();
                 }
                 return true;
             }

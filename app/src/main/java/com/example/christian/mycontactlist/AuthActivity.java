@@ -20,7 +20,7 @@ public class AuthActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.auth_screen);
+        setContentView(R.layout.auth_activity_layout);
         Intent intent = getIntent();
         ctx = this.getApplicationContext();
         loginBtn = findViewById(R.id.log_in_button);

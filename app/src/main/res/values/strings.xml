@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Baby Name</string>
-    <string name="navigation_icon_desc">Search</string>
-    <string name="list_icon_desc">Refine</string>
+    <string name="explore_icon_desc">Explore</string>
+    <string name="refine_icon_desc">Refine</string>
     <string name="settings_icon_desc">Settings</string>
-    <string name="add_contact_main_header">Add Contact</string>
-    <string name="nav_main_header">Search</string>
+    <string name="explore_main_header">Explore</string>
+    <string name="refine_main_header">Refine</string>
     <string name="settings_main_header">Settings</string>
 
     <string name="back">Back</string>
@@ -13,6 +13,7 @@
 
     <!--Auth Activity-->
     <string name="auth_text">Please log in or sign up</string>
+    <string name="no_name">No names in list</string>
     <string name="login_text">Log In</string>
     <string name="signup_text">Sign Up</string>
     <string name="submit_text">Submit</string>
