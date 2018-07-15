@@ -38,6 +38,9 @@ public class RefineGenderModelAdapter extends BaseAdapter {
 
 
     @Override
+    /**
+     * Sets the values from the model to the fragment
+     */
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
 
@@ -69,7 +72,9 @@ public class RefineGenderModelAdapter extends BaseAdapter {
 
         return convertView;
     }
-
+    /**
+     * Holds the values for the fragment
+     */
     private static class ViewHolder {
         public TextView textView1;
         public TextView positiveCount;

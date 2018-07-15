@@ -14,11 +14,17 @@ public class ExploreSreenFragment extends Fragment {
     private String GENDER;
     private int ID;
     @Override
+    /**
+     * Inflates fragment
+     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.explore_screen_fragment, container, false);
         return view;
     }
     @Override
+    /**
+     * Sets the text
+     */
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
         slider_name_text = (TextView) view.findViewById(R.id.slider_name_text);

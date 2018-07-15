@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 
 public class AboutActivity extends AppCompatActivity {
     @Override
+    /**
+     * This will load the about activity layout and set the fragment view
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.about_activity_layout);

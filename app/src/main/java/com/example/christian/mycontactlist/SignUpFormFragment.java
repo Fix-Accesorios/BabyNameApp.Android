@@ -46,6 +46,10 @@ public class SignUpFormFragment extends Fragment {
     private TextView ConPasswordLabel;
     private View v;
 
+    /**
+     * Post event for the sign up form
+     * @return
+     */
     private StringRequest RegisterRequest() {
         return new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
@@ -101,6 +105,10 @@ public class SignUpFormFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Sets all of the elements in the fragment
+     * @param view
+     */
     private void GetElements(View view) {
         submitBtn = (Button) view.findViewById(R.id.sign_up_submit_button);
         fName = (EditText) view.findViewById(R.id.first_name_edit);
@@ -118,16 +126,30 @@ public class SignUpFormFragment extends Fragment {
 
     }
 
+    /**
+     * alerts the user
+     * @param s
+     */
     private void makeToast(String s) {
         Toast.makeText(v.getContext(), s, Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Checks if there is a network connection
+     * @return
+     */
     private boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) this.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
 
         return cm.getActiveNetworkInfo() != null;
     }
 
+    /**
+     * Checks if two strings match or are empty
+     * @param str_1
+     * @param str_2
+     * @return
+     */
     private boolean StringsEqual(String str_1, String str_2) {
         if (str_1.isEmpty()) {
             return false;
@@ -138,35 +160,67 @@ public class SignUpFormFragment extends Fragment {
         return str_1.equals(str_2);
     }
 
+    /**
+     * Getter
+     * @return
+     */
     private String GetFirstName() {
         return fName.getText().toString();
     }
 
+    /**
+     * Getter
+     * @return
+     */
     private String GetLastName() {
         return lName.getText().toString();
     }
 
+    /**
+     * Getter
+     * @return
+     */
     private String GetEmail() {
         return Email.getText().toString();
     }
 
+    /**
+     * Getter
+     * @return
+     */
     private String GetConEmail() {
         return ConEmail.getText().toString();
     }
 
+    /**
+     * Getter
+     * @return
+     */
     private String GetPassword() {
         return Password.getText().toString();
     }
 
+    /**
+     * Getter
+     * @return
+     */
     private String GetConPassword() {
         return ConPassword.getText().toString();
     }
 
+    /**
+     * Goes to main activity after api token is wrote
+     */
     private void GoToActivity() {
         Intent intent = new Intent(this.getActivity(), MainActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * writes the api token to the file system
+     * @param fileContents
+     * @param Error
+     */
     protected void writeApiToken(String fileContents, boolean Error) {
         String filename = "api_token.txt";
         FileOutputStream outputStream;
@@ -184,6 +238,10 @@ public class SignUpFormFragment extends Fragment {
         }
     }
 
+    /**
+     * validates the data for the form submit
+     * @return
+     */
     private boolean ValidateData() {
         String FirstName = GetFirstName();
         String LastName = GetLastName();
@@ -224,6 +282,9 @@ public class SignUpFormFragment extends Fragment {
         return (MatchingEmails && MatchingPasswords && validFirstName && validLastName);
     }
 
+    /**
+     * submits the form and validates the data before doing so.
+     */
     private void SetSubmitClick() {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

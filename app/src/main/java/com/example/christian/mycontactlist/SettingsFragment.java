@@ -43,28 +43,55 @@ public class SettingsFragment extends Fragment {
         SetEvents();
         return view;
     }
+
+    /**
+     * Gets the elements from the fragment
+     * @param view
+     */
     private void GetElements(View view){
         logOutBtn = (Button) view.findViewById(R.id.logOutBtn);
         aboutBtn = (Button) view.findViewById(R.id.aboutBtn);
     }
+
+    /**
+     * Sets click events for the view
+     */
     private void SetEvents(){
         SetLogOutBtn();
         SetAboutBtn();
     }
+
+    /**
+     * Deletes the api token from the file system
+     * @param v
+     * @return
+     */
     protected boolean deleteApiToken(View v) {
         String filename = "api_token.txt";
         File dir = v.getContext().getFilesDir();
         File file = new File(dir, filename);
         return file.delete();
     }
+
+    /**
+     * Restarts activity to check for authentication
+     */
     private void RestartActivity(){
         Intent intent = new Intent(this.getActivity(), MainActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * invokes the about activity
+     */
     private void StartAboutActivity(){
         Intent intent = new Intent(this.getActivity(), AboutActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * Logs the user out the application
+     */
     private void SetLogOutBtn() {
         logOutBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -75,6 +102,10 @@ public class SettingsFragment extends Fragment {
             }
         });
     }
+
+    /**
+     * lets the user view the about screen
+     */
     private void SetAboutBtn() {
         aboutBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

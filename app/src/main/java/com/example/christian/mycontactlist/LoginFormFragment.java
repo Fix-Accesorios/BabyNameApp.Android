@@ -39,11 +39,22 @@ public class LoginFormFragment extends Fragment {
     private TextView emailLabel;
     private TextView passwordLabel;
     RequestQueue queue;
+
+    /**
+     * Checks if there is a network connection
+     * @return
+     */
     private boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) this.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
 
         return cm.getActiveNetworkInfo() != null;
     }
+
+    /**
+     * Get request for login
+     * Sends form params
+     * @return
+     */
     private StringRequest LogIn(){
         String url = "https://murmuring-lake-56352.herokuapp.com/login";
         // String url = "http://172.18.47.49:8080/login";
@@ -104,6 +115,10 @@ public class LoginFormFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Gets all of the elements from the fragment
+     * @param view
+     */
     private void GetElements(View view) {
         submitBtn = (Button) view.findViewById(R.id.submit_button);
         passwordEdit = (EditText) view.findViewById(R.id.password_edit_Text);
@@ -112,6 +127,9 @@ public class LoginFormFragment extends Fragment {
         passwordLabel = (TextView) view.findViewById(R.id.password_label);
     }
 
+    /**
+     * invokes click events
+     */
     private void SetEvents() {
         SetSubmitEvent();
     }
@@ -124,6 +142,10 @@ public class LoginFormFragment extends Fragment {
         return passwordEdit.getText().toString();
     }
 
+    /**
+     * Makes sures the data is good to send to the api
+     * @return
+     */
     private boolean ValidateData() {
         String email = GetEmail();
         String password = GetPassword();
@@ -141,10 +163,20 @@ public class LoginFormFragment extends Fragment {
         }
         return (goodEmail && goodPassword);
     }
+
+    /**
+     * Go to the main activity on success
+     */
     private void GoToActivity(){
         Intent intent = new Intent(this.getActivity(), MainActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * on login success, it will write the token to the file system
+     * @param fileContents
+     * @param Error
+     */
     protected void writeApiToken(String fileContents, boolean Error) {
         String filename = "api_token.txt";
         FileOutputStream outputStream;
@@ -161,6 +193,10 @@ public class LoginFormFragment extends Fragment {
             makeToast(getView().getContext(), "Cannot create account. Try Again.");
         }
     }
+
+    /**
+     * Checks if the form is valid, if so, will invoke the get request for the token
+     */
     private void SetSubmitEvent() {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -178,6 +214,12 @@ public class LoginFormFragment extends Fragment {
             }
         });
     }
+
+    /**
+     * Makes toast for user during form actions
+     * @param _ctx
+     * @param s
+     */
     static void makeToast(Context _ctx, String s) {
         Toast.makeText(_ctx, s, Toast.LENGTH_SHORT).show();
     }

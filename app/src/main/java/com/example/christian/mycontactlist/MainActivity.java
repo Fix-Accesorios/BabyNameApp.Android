@@ -24,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
     static void makeToast(Context ctx, String s) {
         Toast.makeText(ctx, s, Toast.LENGTH_SHORT).show();
     }
+
+    /**
+     * Checks if user is logged in by looking for the token in the fs
+     * @return
+     */
     protected boolean checkForLogin() {
         String filename = "api_token.txt";
         File directory = getFilesDir();
@@ -64,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
+    /**
+     * If the token exists, the main activity will be loaded
+     * otherwise the authenication activity will be started
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity_layout);
@@ -76,11 +85,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * If no token, this gets started to get a token
+     */
     private void StartAuthActivity(){
         Intent intent = new Intent(this, AuthActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Sets the fragment default view
+     * @param savedInstanceState
+     */
     private void setDefaultView(Bundle savedInstanceState) {
         // Check that the activity is using the layout version with
         // the fragment_container FrameLayout
@@ -97,6 +113,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Controls for the bottom navigation view
+     */
     private void initBottomNavMenu() {
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

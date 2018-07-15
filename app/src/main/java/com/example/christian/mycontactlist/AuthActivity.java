@@ -6,18 +6,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class AuthActivity extends AppCompatActivity {
     private Button loginBtn;
     private Button signUpBtn;
     private Context ctx;
 
-    static void makeToast(Context ctx, String s) {
-        Toast.makeText(ctx, s, Toast.LENGTH_SHORT).show();
-    }
 
     @Override
+    /**
+     * On create method, this will set buttons and invoke the click events
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.auth_activity_layout);
@@ -28,11 +27,17 @@ public class AuthActivity extends AppCompatActivity {
         setClickEvents();
     }
 
+    /**
+     * Calls the click events
+     */
     private void setClickEvents() {
         setLogInClick();
         setSignUpClick();
     }
 
+    /**
+     * This click event will load the LoginSignUp activity with the param to set the sign up form
+     */
     private void setSignUpClick() {
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -44,7 +49,9 @@ public class AuthActivity extends AppCompatActivity {
             }
         });
     }
-
+    /**
+     * This click event will load the LoginSignUp activity with the param to set the log in form
+     */
     private void setLogInClick() {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

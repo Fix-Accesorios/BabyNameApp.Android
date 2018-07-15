@@ -51,11 +51,24 @@ public class ExploreFragment extends Fragment {
     RequestQueue queue;
     String url = "https://murmuring-lake-56352.herokuapp.com/names";
     // String url = "http://172.18.47.49:8080/names";
+
+    /**
+     * Sends toast to android device
+     * @param ctx
+     * @param s - message to send
+     */
     static void makeToast(Context ctx, String s) {
         Toast.makeText(ctx, s, Toast.LENGTH_SHORT).show();
     }
+
+    /**
+     * This implements the events in the SwipeFlingAdapterView.onFlingListener
+     */
     SwipeFlingAdapterView.onFlingListener onFlingListener = new SwipeFlingAdapterView.onFlingListener() {
         @Override
+        /**
+         * Removes the first obj in the stack
+         */
         public void removeFirstObjectInAdapter() {
             // this is the simplest way to delete an object from the Adapter (/AdapterView)
           //  Log.d("LIST", "removed object!");
@@ -64,6 +77,9 @@ public class ExploreFragment extends Fragment {
         }
 
         @Override
+        /**
+         * Checks for network, if none, toast made, otherwise sends vote to api
+         */
         public void onLeftCardExit(Object dataObject) {
             //Do something on the left!
             //You also have access to the original object.
@@ -77,6 +93,9 @@ public class ExploreFragment extends Fragment {
         }
 
         @Override
+        /**
+         * Checks for network, if none, toast made, otherwise sends vote to api
+         */
         public void onRightCardExit(Object dataObject) {
 
             GenderModel model = (GenderModel)dataObject;
@@ -88,6 +107,9 @@ public class ExploreFragment extends Fragment {
         }
 
         @Override
+        /**
+         * Gets more name when array is about to be empty
+         */
         public void onAdapterAboutToEmpty(int itemsInAdapter) {
             // Ask for more data here
             if(isNetworkConnected()){
@@ -105,11 +127,20 @@ public class ExploreFragment extends Fragment {
 //                view.findViewById(R.id.item_swipe_left_indicator).setAlpha(scrollProgressPercent > 0 ? scrollProgressPercent : 0);
         }
     };
+
+    /**
+     * Checks if there is a network connection
+     * @return
+     */
     private boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) this.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         return cm.getActiveNetworkInfo() != null;
     }
 
+    /**
+     * Gets the token for get/posts
+     * @return
+     */
     protected String getToken() {
         String filename = "api_token.txt";
         File directory = getContext().getFilesDir();
@@ -148,7 +179,12 @@ public class ExploreFragment extends Fragment {
 
     }
 
-
+    /**
+     * This sets the vote to the api
+     * @param model - contains name id for url
+     * @param direction - positive or negative indicator
+     * @return
+     */
     private StringRequest SetNameVote(GenderModel model, String direction){
         String post_url = "https://murmuring-lake-56352.herokuapp.com/user_names";
         // String post_url = "http://172.18.47.49:8080/user_names";
@@ -180,7 +216,10 @@ public class ExploreFragment extends Fragment {
     }
 
 
-
+    /**
+     * Gets a list of names based on gender
+     * @return
+     */
     private JsonArrayRequest GetNames(){
         al.clear();
         arrayAdapter.notifyDataSetChanged();
@@ -239,6 +278,10 @@ public class ExploreFragment extends Fragment {
 
 
     @Override
+    /**
+     * Sets the buttons and views in the layout
+     * inits all flingContainer controls
+     */
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.explore_container_fragment, container, false);
@@ -266,11 +309,21 @@ public class ExploreFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Sets the click events for the gender icons
+     */
     private void SetEvents(){
        SetBoyBtnClick();
        SetGirlBtnClick();
        SetMixBtnClick();
     }
+
+    /**
+     * Changes background color to blue
+     * Sets gender to boys
+     * Deletes old list
+     * Populates new list
+     */
     private void SetBoyBtnClick(){
         boyBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -284,6 +337,12 @@ public class ExploreFragment extends Fragment {
             }
         });
     }
+    /**
+     * Changes background color to pink
+     * Sets gender to girls
+     * Deletes old list
+     * Populates new list
+     */
     private void SetGirlBtnClick(){
         girlBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -297,6 +356,12 @@ public class ExploreFragment extends Fragment {
             }
         });
     }
+    /**
+     * Changes background color to mixed
+     * Sets gender to both
+     * Deletes old list
+     * Populates new list
+     */
     private void SetMixBtnClick(){
         bothBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

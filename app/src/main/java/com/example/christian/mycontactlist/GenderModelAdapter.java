@@ -38,6 +38,9 @@ public class GenderModelAdapter extends BaseAdapter {
 
 
     @Override
+    /**
+     * Sets the values from the model to the fragment
+     */
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
 
@@ -65,7 +68,9 @@ public class GenderModelAdapter extends BaseAdapter {
 
         return convertView;
     }
-
+    /**
+     * Holds the values for the fragment
+     */
     private static class ViewHolder {
         public TextView textView1;
         public android.support.constraint.ConstraintLayout layout;

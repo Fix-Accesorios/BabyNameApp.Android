@@ -26,6 +26,11 @@ public class LoginSignUpActivity extends AppCompatActivity {
     static void makeToast(Context _ctx, String s) {
         Toast.makeText(_ctx, s, Toast.LENGTH_SHORT).show();
     }
+
+    /**
+     * Determines which fragment to load based on given intent
+     * @param type
+     */
     private void SetFragmentView(String type){
         if(type.isEmpty()){
             makeToast(ctx, "No type given");
