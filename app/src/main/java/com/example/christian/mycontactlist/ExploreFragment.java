@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+// import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,7 +50,7 @@ public class ExploreFragment extends Fragment {
     private ConstraintLayout mainContainer;
     RequestQueue queue;
     String url = "https://murmuring-lake-56352.herokuapp.com/names";
-    //String url = "http://172.18.47.49:8080/names";
+    // String url = "http://172.18.47.49:8080/names";
     static void makeToast(Context ctx, String s) {
         Toast.makeText(ctx, s, Toast.LENGTH_SHORT).show();
     }
@@ -58,7 +58,7 @@ public class ExploreFragment extends Fragment {
         @Override
         public void removeFirstObjectInAdapter() {
             // this is the simplest way to delete an object from the Adapter (/AdapterView)
-            Log.d("LIST", "removed object!");
+          //  Log.d("LIST", "removed object!");
             al.remove(0);
             arrayAdapter.notifyDataSetChanged();
         }
@@ -151,7 +151,7 @@ public class ExploreFragment extends Fragment {
 
     private StringRequest SetNameVote(GenderModel model, String direction){
         String post_url = "https://murmuring-lake-56352.herokuapp.com/user_names";
-        //String post_url = "http://172.18.47.49:8080/user_names";
+        // String post_url = "http://172.18.47.49:8080/user_names";
         post_url += "/" + String.valueOf(model.Id);
         post_url += "/" + direction;
         final String token = getToken();
@@ -253,6 +253,7 @@ public class ExploreFragment extends Fragment {
         girlBtn = (ImageButton) view.findViewById(R.id.girlBtn);
         bothBtn = (ImageButton) view.findViewById(R.id.mixBtn);
         mainContainer = (ConstraintLayout) getActivity().findViewById(R.id.main_activity_container);
+        mainContainer.setBackground(getContext().getResources().getDrawable(R.drawable.gradient_mix));
         if(isNetworkConnected()){
             arrayAdapter = new GenderModelAdapter(this.getActivity(), inflater, al);
             flingContainer.setAdapter(arrayAdapter);

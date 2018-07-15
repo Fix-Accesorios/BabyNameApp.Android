@@ -7,7 +7,7 @@ import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+// import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,7 +46,7 @@ public class LoginFormFragment extends Fragment {
     }
     private StringRequest LogIn(){
         String url = "https://murmuring-lake-56352.herokuapp.com/login";
-        //String url = "http://172.18.47.49:8080/login";
+        // String url = "http://172.18.47.49:8080/login";
         Uri.Builder uri_b = new Uri.Builder();
         uri_b.appendQueryParameter("email", GetEmail());
         uri_b.appendQueryParameter("password", GetPassword());
@@ -64,13 +64,13 @@ public class LoginFormFragment extends Fragment {
                             json = new JSONObject(response);
                         } catch (org.json.JSONException e) {
                             Error = true;
-                            Log.d("Error", "Could not parse JSON");
+                           // Log.d("Error", "Could not parse JSON");
                         }
                         try {
                             token = json.getString("token");
                         } catch (org.json.JSONException e) {
                             Error = true;
-                            Log.d("Error", "Could not parse JSON Object for token");
+                            // Log.d("Error", "Could not parse JSON Object for token");
                         }
                         writeApiToken(token, Error);
                     }

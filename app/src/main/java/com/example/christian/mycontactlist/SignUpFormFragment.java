@@ -29,8 +29,8 @@ import java.util.Map;
 
 public class SignUpFormFragment extends Fragment {
     RequestQueue queue;
-    String url = "https://murmuring-lake-56352.herokuapp.com/users";
-    //String url = "http://172.18.47.49:8080/users";
+     String url = "https://murmuring-lake-56352.herokuapp.com/users";
+    // String url = "http://172.18.47.49:8080/users";
     private Button submitBtn;
     private EditText fName;
     private TextView fNameLabel;

@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+//import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,7 +50,7 @@ public class RefineFragment extends Fragment {
     private ConstraintLayout mainContainer;
     RequestQueue queue;
     String url = "https://murmuring-lake-56352.herokuapp.com/refine";
-    //String url = "http://172.18.47.49:8080/refine";
+    // String url = "http://172.18.47.49:8080/refine";
     static void makeToast(Context ctx, String s) {
         Toast.makeText(ctx, s, Toast.LENGTH_SHORT).show();
     }
@@ -275,6 +275,7 @@ public class RefineFragment extends Fragment {
         girlBtn = (ImageButton) view.findViewById(R.id.girlBtn);
         bothBtn = (ImageButton) view.findViewById(R.id.mixBtn);
         mainContainer = (ConstraintLayout) getActivity().findViewById(R.id.main_activity_container);
+        mainContainer.setBackground(getContext().getResources().getDrawable(R.drawable.gradient_mix));
         if(isNetworkConnected()){
             arrayAdapter = new RefineGenderModelAdapter(this.getActivity(), inflater, al);
             flingContainer.setAdapter(arrayAdapter);

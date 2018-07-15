@@ -37,7 +37,7 @@ public class AuthActivity extends AppCompatActivity {
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
-                makeToast(AuthActivity.this.getApplicationContext(), "Load Sign Up Activity");
+             //   makeToast(AuthActivity.this.getApplicationContext(), "Load Sign Up Activity");
                 Intent intent = new Intent(AuthActivity.this.getApplicationContext(), LoginSignUpActivity.class);
                 intent.putExtra("FormType", "SignUp");
                 startActivity(intent);
@@ -49,7 +49,7 @@ public class AuthActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
-                makeToast(AuthActivity.this.getApplicationContext(), "Load Log In Activity");
+              //  makeToast(AuthActivity.this.getApplicationContext(), "Load Log In Activity");
                 Intent intent = new Intent(AuthActivity.this.getApplicationContext(), LoginSignUpActivity.class);
                 intent.putExtra("FormType", "Login");
                 startActivity(intent);
